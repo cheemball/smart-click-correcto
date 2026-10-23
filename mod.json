@@ -1,0 +1,60 @@
+{
+	"geode": "4.6.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"version": "v1.0.0",
+	"id": "tunombre.click-assist",
+	"name": "Click Assist",
+	"developer": "TuNombre",
+	"description": "Corrige tus clics equivocados cerca de un obstaculo (ideal para wave) para que no mueras.",
+	"settings": {
+		"enabled": {
+			"name": "Activar Click Assist",
+			"description": "Activa o desactiva la correccion automatica de clics.",
+			"type": "bool",
+			"default": true
+		},
+		"range-ms": {
+			"name": "Rango de correccion (ms)",
+			"description": "Que tan atras en el tiempo puede corregir el mod tu ultimo clic o soltada. Bajo = mas legit, alto = mas permisivo.",
+			"type": "int",
+			"default": 60,
+			"min": 10,
+			"max": 250,
+			"control": {
+				"slider": true,
+				"arrows": true,
+				"input": true
+			}
+		},
+		"max-corrections": {
+			"name": "Correcciones maximas seguidas",
+			"description": "Limite de correcciones en medio segundo. Evita que el mod te salve de un choque que no fue un error de click (por ejemplo un pico).",
+			"type": "int",
+			"default": 3,
+			"min": 1,
+			"max": 10,
+			"control": {
+				"slider": true,
+				"arrows": true,
+				"input": true
+			}
+		},
+		"only-wave": {
+			"name": "Solo en wave",
+			"description": "Aplica la correccion unicamente cuando el jugador es wave.",
+			"type": "bool",
+			"default": false
+		},
+		"safe-mode": {
+			"name": "Modo seguro (no guardar progreso)",
+			"description": "Al corregir un clic, el intento se marca como test y el progreso/completado NO se guarda. Recomendado para no hacer trampa en rankings.",
+			"type": "bool",
+			"default": true
+		}
+	}
+}
